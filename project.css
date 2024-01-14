@@ -1,0 +1,644 @@
+body {
+    font-size: large;
+    color: black;
+    background-color: #eeeeee;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+/*
+/*========= LoadingのためのCSS ===============*/
+
+/* Loading背景画面設定　*/
+
+#splash {
+    /*fixedで全面に固定*/
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background: #333;
+    text-align: center;
+    color: #fff;
+}
+
+/* Loadingバー中央配置　*/
+#splash_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+#progress-bar {
+    width: 50%;
+    height: 20px;
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#progress {
+    width: 0;
+    height: 100%;
+    background: #4caf50;
+    border-radius: 10px;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Loading画像中央配置　*/
+#splash_logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Loading アイコンの大きさ設定　*/
+#splash_logo img {
+    width: 1501px;
+}
+
+/* Loading背景画面設定　*/
+
+#splash {
+    /*fixedで全面に固定*/
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    text-align: center;
+    color: #fff;
+}
+
+/* Loadingバー中央配置　*/
+#splash_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+/* fadeUpをするアイコンの動き */
+
+.fadeUp {
+    animation-name: fadeUpAnime;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*========= LoadingのためのCSS終わり ===============*/
+
+div#container {
+    width: auto;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    height: 70px;
+    background-color: darkgrey;
+    align-items: center;
+}
+
+h1 {
+    font-family: "Times New Roman";
+    margin-top: 50px;
+    margin-bottom: 0px;
+    padding: 5px 170px;
+    font-size: 160%;
+    font-weight: bold;
+    color: #2f4f4f;
+}
+
+h2 {
+    font-family: "Impact";
+    border-radius: 0px 50px 0px 50px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 5px 15px;
+    background: #669943;
+    background-size: 10px;
+    font-size: 160%;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+h3 {
+    font-family: "Impact";
+    border-radius: 50px 50px 50px 50px;
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 5px 15px;
+    background: #243618;
+    background-size: 5px;
+    font-size: 160%;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.kazyo {
+    width: fit-content;
+    margin: auto;
+}
+
+.kazyo ol {
+    padding-left: 0;
+}
+
+.main {
+    /*本文*/
+    text-align: center;
+    padding: 1rem 2rem;
+    line-height: 2.5rem;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.title {
+    margin: 0;
+    margin-right: auto;
+}
+
+.logo {
+    position: absolute;
+    width: 10%;
+    top: 0;
+    left: 0;
+    padding-left: 0px;
+    margin-left: 0px;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    margin-right: 35px;
+}
+
+a:hover {
+    color: rgb(214, 237, 248);
+}
+
+.top {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+}
+
+.menu2 {
+    width: 100%;
+    height: 70px;
+    margin-top: 0;
+    padding: 5px 170px;
+    background: #000000;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+}
+
+.menu-bar2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.menu-bar-list {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+#item1,
+#item2,
+#item3,
+#item4,
+#item5,
+#item6 {
+    list-style: none;
+}
+
+/* ハンバーガーメニューのスタイル */
+#hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-bar {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.menu-bar li {
+    padding: 10px;
+}
+
+/*ニュース1行の周りの余白*/
+.news a {
+    display: block;
+    background: #fff;
+    padding: 20px;
+    color: #000;
+    text-align: center;
+    pointer-events: none;
+}
+
+/*日付*/
+.news span {
+    display: inline-block;
+    font-size: 0.8rem;
+    margin-right: 10px;
+    color: #777;
+}
+
+/* メディアクエリ: スマートフォンの場合に表示 */
+@media only screen and (max-width: 767px) {
+
+    #splash {
+        display: none;
+    }
+
+    #hamburger-menu {
+        display: block;
+        margin-left: auto;
+    }
+
+    .menu-bar {
+        display: none;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1;
+    }
+
+    .menu-bar.show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .openbtn {
+        position: relative;
+        background: #669943;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+    }
+
+    /* ボタン内側 */
+    .openbtn span {
+        display: inline-block;
+        transition: all .4s;
+        /* アニメーションの設定 */
+        position: absolute;
+        left: 14px;
+        height: 3px;
+        border-radius: 2px;
+        background: #fff;
+        width: 45%;
+    }
+
+    .openbtn span:nth-of-type(1) {
+        top: 15px;
+    }
+
+    .openbtn span:nth-of-type(2) {
+        top: 23px;
+    }
+
+    .openbtn span:nth-of-type(3) {
+        top: 31px;
+    }
+
+    /* activeクラスが付与されると線が回転して×に */
+
+    .openbtn.active span:nth-of-type(1) {
+        top: 18px;
+        left: 18px;
+        transform: translateY(6px) rotate(-45deg);
+        width: 30%;
+    }
+
+    .openbtn.active span:nth-of-type(2) {
+        opacity: 0;
+        /* 真ん中の線は透過 */
+    }
+
+    .openbtn.active span:nth-of-type(3) {
+        top: 30px;
+        left: 18px;
+        transform: translateY(-6px) rotate(45deg);
+        width: 30%;
+    }
+
+
+    .logo {
+        position: absolute;
+        width: 16.25%;
+        top: 0;
+        left: 0;
+        padding-left: 0px;
+        margin-left: 0px;
+    }
+
+    .menu2 {
+        display: none;
+    }
+
+    .news {
+        display: none;
+    }
+
+}
+
+/*====================================================================
+  slick
+  ====================================================================*/
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.sliderArea {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+.sliderArea.w300 {
+    max-width: 300px;
+}
+
+.slick-slide {
+    margin: 0 5px;
+}
+
+.slick-slide img {
+    width: 100%;
+    height: auto;
+}
+
+.slick-prev,
+.slick-next {
+    z-index: 1;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: #000;
+}
+
+.slick-slide {
+    transition: all ease-in-out .3s;
+    opacity: .2;
+}
+
+.slick-active {
+    opacity: 1;
+}
+
+.slick-current {
+    opacity: 1;
+}
+
+.thumb {
+    margin: 20px 0 0;
+}
+
+.thumb .slick-slide {
+    cursor: pointer;
+}
+
+.thumb .slick-slide:hover {
+    opacity: .7;
+}
+
+/*====================================================================
+.full-screen-o
+====================================================================*/
+
+.full-screen-o .slick-list {
+    overflow: hidden;
+}
+
+.full-screen-o.slider {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.full-screen-o .slick-dots {
+    bottom: -33px;
+}
+
+.full-screen-o .slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.full-screen-o .slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    padding: 0;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    text-indent: -9999px;
+    display: block;
+    width: 8px;
+    height: 8px;
+    margin: 0 8px;
+    outline: 0;
+    border-radius: 5px;
+    transition-duration: 0.3s;
+}
+
+.full-screen-o .slick-dots li button:before {
+    content: none;
+}
+
+.full-screen-o .slick-dots li:nth-child(1) button {
+    background: #f5d1c3;
+}
+
+.full-screen-o .slick-dots li:nth-child(2) button {
+    background: #a9b7ba;
+}
+
+.full-screen-o .slick-dots li:nth-child(3) button {
+    background: #c4d7d1;
+}
+
+.full-screen-o .slick-dots li:nth-child(4) button {
+    background: #b4b1a0;
+}
+
+.full-screen-o .slick-dots li:nth-child(5) button {
+    background: #E3FDFD;
+}
+
+.full-screen-o .slick-dots li:nth-child(6) button {
+    background: #CBF1F5;
+}
+
+.full-screen-o .slick-dots li:nth-child(7) button {
+    background: #A6E3E9;
+}
+
+.full-screen-o .slick-dots li:nth-child(8) button {
+    background: #71C9CE;
+}
+
+.full-screen-o .slick-dots li button:hover,
+.full-screen-o .slick-dots li.slick-active button {
+    border-radius: 0px;
+    width: 12px;
+    height: 12px;
+}
+
+iframe {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 50%;
+    height: 600px;
+}
+
+
+
+#footer {
+    width: 100%;
+    height: 70px;
+    margin-top: 0;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+}
+
+.foot {
+    justify-content: center;
+    display: flex;
+}
+
+.ft {
+    list-style: none;
+}
+
+#footer p {
+    color: #000000;
+    text-align: center;
+}
+
+#page-top {
+    position: fixed;
+    bottom: 20px;
+    right: 0;
+    font-size: 77%;
+}
+
+#page-top a {
+    background: #666;
+    text-decoration: none;
+    color: #fff;
+    width: 100px;
+    padding: 30px 0;
+    text-align: center;
+    display: block;
+    border-radius: 5px;
+}
+
+#page-top a:hover {
+    text-decoration: none;
+    background: #999;
+}
+
+/*チップツールcss*/
+
+p.caption {
+    text-align: center;
+    margin: 100px 0;
+    font-size: 1.2rem;
+}
+
+.inner-cap p {
+    font-size: 0.8rem;
+}
+
+.btn {
+    display: block;
+    outline: none;
+    background: #333;
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px 50px;
+    margin: 0 auto;
+}
+
+.btn:hover {
+    background: #056AA9;
+}
+
+
+.capspan span {
+    background: linear-gradient(transparent 60%, #ffff66 60%);
+    cursor: pointer;
+    /*カーソルを指マークに変更*/
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/*チップツールcss終わり*/
+
+.human {
+    display: block;
+    margin: auto;
+    width: 25%;
+    height: 25%;
+}
+
+div#contents {
+    text-align: center;
+}
